@@ -3,6 +3,10 @@ import data from './data.js';
 
 const app = express();
 
+app.get('/', (req, res) => {
+  res.json({ message: 'Welcome to Dosimple!' });
+});
+
 app.get('/api/products', (req, res) => {
   res.send(data.products);
 });

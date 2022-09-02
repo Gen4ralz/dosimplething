@@ -58,3 +58,7 @@ main {
   background-color: #850e35;
   border: none;
 }
+
+.btn-primary:focus {
+  background-color: #850e35;
+}
