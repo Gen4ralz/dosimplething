@@ -53,3 +53,12 @@ main {
 .review {
   color: #fdcc0d;
 }
+
+.img-large {
+  max-width: 400px;
+}
+
+.btn-primary {
+  background-color: #54bab9;
+  border: none;
+}

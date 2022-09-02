@@ -10,6 +10,7 @@ const data = {
       rating: 4.5,
       numReviews: 10,
       description: 'High quality clothes',
+      countInStock: 10,
       colors: [
         { name: 'Pink', class: 'bg-pink', countInStock: 10 },
         { name: 'Brown', class: 'bg-brown', countInStock: 8 },
@@ -26,6 +27,7 @@ const data = {
       rating: 4.8,
       numReviews: 7,
       description: 'High quality clothes',
+      countInStock: 10,
       colors: [
         { name: 'Green', class: 'bg-green', countInStock: 10 },
         { name: 'Violet', class: 'bg-violet', countInStock: 8 },
@@ -42,6 +44,7 @@ const data = {
       rating: 4.8,
       numReviews: 7,
       description: 'High quality clothes',
+      countInStock: 0,
       colors: [
         { name: 'White', class: 'bg-white', countInStock: 10 },
         { name: 'Blue', class: 'bg-blue', countInStock: 8 },
