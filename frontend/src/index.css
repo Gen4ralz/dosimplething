@@ -46,19 +46,15 @@ main {
   padding: 1rem;
 }
 
-.rating {
-  color: #ffdf00;
-}
-
-.review {
-  color: #fdcc0d;
+.rating span {
+  color: #ee6983;
 }
 
 .img-large {
-  max-width: 400px;
+  max-width: 100%;
 }
 
 .btn-primary {
-  background-color: #54bab9;
+  background-color: #850e35;
   border: none;
 }
