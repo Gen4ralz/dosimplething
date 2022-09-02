@@ -45,3 +45,11 @@ main {
 .product-info {
   padding: 1rem;
 }
+
+.rating {
+  color: #ffdf00;
+}
+
+.review {
+  color: #fdcc0d;
+}

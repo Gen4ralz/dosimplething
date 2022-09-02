@@ -26,7 +26,7 @@ function App() {
             </Routes>
           </Container>
         </main>
-        <footer>
+        {/* <footer>
           <Navbar bg="light" fixed="bottom">
             <Container>
               <LinkContainer to="/">
@@ -34,7 +34,7 @@ function App() {
               </LinkContainer>
             </Container>
           </Navbar>
-        </footer>
+        </footer> */}
       </div>
     </BrowserRouter>
   );
