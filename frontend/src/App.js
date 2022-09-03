@@ -27,7 +27,7 @@ function App() {
                   <span className="px-2">
                     {cart.cartItems.length > 0 && (
                       <Badge pill bg="danger">
-                        {cart.cartItems.length}
+                        {cart.cartItems.reduce((a, c) => a + c.quantity, 0)}
                       </Badge>
                     )}
                   </span>

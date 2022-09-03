@@ -1,6 +1,7 @@
 const data = {
   products: [
     {
+      _id: '1',
       name: 'Momo set',
       slug: 'momo-set',
       category: 'sets',
@@ -18,6 +19,7 @@ const data = {
       ],
     },
     {
+      _id: '2',
       name: 'Maxi Pop dress',
       slug: 'maxi-pop-dress',
       category: 'dress',
@@ -35,6 +37,7 @@ const data = {
       ],
     },
     {
+      _id: '3',
       name: 'Lanie Set',
       slug: 'lanie-set',
       category: 'sets',
