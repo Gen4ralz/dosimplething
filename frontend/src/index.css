@@ -62,3 +62,7 @@ main {
 .btn-primary:focus {
   background-color: #850e35;
 }
+
+.img-thumbnail {
+  height: 80px;
+}

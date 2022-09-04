@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
 import { useReducer, useEffect, useContext } from 'react';
 import Row from 'react-bootstrap/Row';
@@ -28,6 +28,7 @@ const reducer = (state, action) => {
 };
 
 function ProductScreen() {
+  const router = useNavigate();
   const params = useParams();
   const { slug } = params;
 
@@ -52,6 +53,7 @@ function ProductScreen() {
 
   const { state, dispatch: ctxDispatch } = useContext(Store);
   const { cart } = state;
+
   const addToCartHandler = async () => {
     const existItem = cart.cartItems.find((x) => x._id === product._id);
     const quantity = existItem ? existItem.quantity + 1 : 1;
@@ -64,6 +66,7 @@ function ProductScreen() {
       type: 'CART_ADD_ITEM',
       payload: { ...product, quantity },
     });
+    router('/cart');
   };
 
   return loading ? (
