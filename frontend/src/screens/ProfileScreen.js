@@ -26,25 +26,36 @@ export default function ProfileScreen() {
   const [name, setName] = useState(userInfo.name);
   const [email, setEmail] = useState(userInfo.email);
   const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
+  const [setConfirmPassword] = useState('');
 
   const [{ loadingUpdate }, dispatch] = useReducer(reducer, {
     loadingUpdate: false,
   });
+
   const submitHandler = async (e) => {
     e.preventDefault();
     try {
-      const { data } = axios.put(
+      const { data } = await axios.put(
         '/api/users/profile',
-        { name, email, password },
-        { headers: { authorization: `Bearer ${userInfo.token}` } }
+        {
+          name,
+          email,
+          password,
+        },
+        {
+          headers: { Authorization: `Bearer ${userInfo.token}` },
+        }
       );
-      dispatch({ type: 'UPDATE_SUCCESS' });
-      ctxDispatch({ type: 'USER_SIGIN', payload: data });
+      dispatch({
+        type: 'UPDATE_SUCCESS',
+      });
+      ctxDispatch({ type: 'USER_SIGNIN', payload: data });
       localStorage.setItem('userInfo', JSON.stringify(data));
       toast.success('User updated successfully');
     } catch (err) {
-      dispatch({ type: 'UPDATE_FAIL' });
+      dispatch({
+        type: 'FETCH_FAIL',
+      });
       toast.error(getError(err));
     }
   };
