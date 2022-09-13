@@ -32,16 +32,16 @@ app.use('/api/products', productRouter);
 app.use('/api/users', userRouter);
 app.use('/api/orders', orderRouter);
 
-//Server HomePage
-app.get('/', (req, res) => {
-  res.json({ message: 'Welcome to Dosimple!' });
-});
-
 const __dirname = path.resolve();
 app.use(express.static(path.join(__dirname, '/frontend/build')));
 app.get('*', (req, res) =>
   res.sendFile(path.join(__dirname, '/frontend/build/index.html'))
 );
+
+//Server HomePage
+app.get('/', (req, res) => {
+  res.json({ message: 'Welcome to Dosimple!' });
+});
 
 app.use((err, req, res, next) => {
   res.status(500).send({ message: err.message });
